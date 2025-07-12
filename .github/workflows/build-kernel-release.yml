@@ -167,7 +167,7 @@ jobs:
 
       - name: Build Kernel
         id: build_kernel
-        uses: ./ # Refers to the current repository, which contains action.yml
+        uses: ./OnePlus_KernelSU_SUSFS/ # Updated path based on error
         with:
           model: ${{ matrix.model }}
           soc: ${{ matrix.soc }}
