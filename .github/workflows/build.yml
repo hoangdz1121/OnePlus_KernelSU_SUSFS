@@ -54,11 +54,11 @@ jobs:
             aria2 ansible azure-cli shellcheck rpm xorriso zsync \
             google-cloud-sdk imagemagick \
             libmagickcore-dev libmagickwand-dev libmagic-dev ant ant-optional kubectl \
-            mercurial apt-transport-https mono-complete
+            mercurial apt-transport-https mono-complete \
             unixodbc-dev yarn chrpath libssl-dev libxft-dev \
             libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev \
             snmp pollinate libpq-dev postgresql-client powershell ruby-full \
-            sphinxsearch subversion
+            sphinxsearch subversion \
           
           # Regex-based purges (for bulk families like mysql, php, dotnet)
           sudo apt-get purge -y $(dpkg-query -W -f='${binary:Package}\n' | grep -E '^mysql|^php|^dotnet') || true
